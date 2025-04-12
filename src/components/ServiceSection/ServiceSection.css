@@ -1,0 +1,194 @@
+.service-section {
+  background-color: #243b6b; /* Dark blue background like in the screenshot */
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+.service-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.service-title {
+  color: white;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.service-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.line {
+  height: 2px;
+  width: 60px;
+  background-color: #5b89a6; /* Odyssey blue */
+  display: inline-block;
+}
+
+.star {
+  color: #5b89a6; /* Odyssey blue */
+  font-size: 1.5rem;
+  margin: 0 15px;
+}
+
+.service-intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.service-card {
+  flex: 1;
+  background-color: transparent;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 350px;
+}
+
+.service-image-container {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 5px solid #5b89a6; /* Odyssey blue */
+}
+
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: 2px solid #5b89a6; /* Odyssey blue */
+}
+
+.service-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: #5b89a6; /* Odyssey blue */
+}
+
+.service-card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.service-card-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Diagonal pattern background */
+.service-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.08) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.08) 50%, rgba(0, 0, 0, 0.08) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.service-container {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 992px) {
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .service-card {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-section {
+    padding: 60px 0;
+  }
+  
+  .service-title {
+    font-size: 2.2rem;
+  }
+  
+  .service-intro {
+    font-size: 1rem;
+  }
+  
+  .service-image-container {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-image-container {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .service-title {
+    font-size: 1.8rem;
+  }
+  
+  .line {
+    width: 40px;
+  }
+  
+  .service-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .service-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}

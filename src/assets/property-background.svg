@@ -1,0 +1,73 @@
+<svg width="1200" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky background -->
+  <rect width="1200" height="600" fill="#a7c5df"/>
+  
+  <!-- Grass -->
+  <rect y="450" width="1200" height="150" fill="#7a9c3e"/>
+  
+  <!-- Left House -->
+  <g>
+    <!-- Main structure -->
+    <rect x="50" y="200" width="350" height="250" fill="#8c6a56"/>
+    <!-- Roof -->
+    <polygon points="25,200 225,100 425,200" fill="#594c4a"/>
+    <!-- Door -->
+    <rect x="175" y="350" width="80" height="100" fill="#4a3c34"/>
+    <!-- Windows -->
+    <rect x="100" y="250" width="60" height="80" fill="#dcdcdc"/>
+    <rect x="290" y="250" width="60" height="80" fill="#dcdcdc"/>
+    <!-- Garage -->
+    <rect x="425" y="300" width="150" height="150" fill="#a89078"/>
+    <rect x="440" y="320" width="120" height="130" fill="#f0f0f0"/>
+    <!-- Driveway -->
+    <polygon points="440,450 560,450 600,550 400,550" fill="#aaa9a5"/>
+  </g>
+  
+  <!-- Right House -->
+  <g>
+    <!-- Main structure -->
+    <rect x="700" y="180" width="400" height="270" fill="#ebdfcc"/>
+    <!-- Roof -->
+    <polygon points="675,180 900,80 1125,180" fill="#8a6e62"/>
+    <!-- Door -->
+    <rect x="840" y="350" width="90" height="100" fill="#8a6e62"/>
+    <!-- Windows -->
+    <rect x="750" y="230" width="70" height="90" fill="#dcdcdc"/>
+    <rect x="850" y="230" width="70" height="90" fill="#dcdcdc"/>
+    <rect x="950" y="230" width="70" height="90" fill="#dcdcdc"/>
+    <!-- Driveway -->
+    <polygon points="750,450 900,450 950,550 700,550" fill="#aaa9a5"/>
+  </g>
+  
+  <!-- Person cleaning driveway -->
+  <g>
+    <!-- Body -->
+    <rect x="500" y="420" width="30" height="60" fill="#0053a0"/>
+    <!-- Head -->
+    <circle cx="515" cy="410" r="15" fill="#f2d6b3"/>
+    <!-- Hat -->
+    <path d="M500,407 C500,402 505,395 515,395 C525,395 530,402 530,407" fill="#0053a0"/>
+    <!-- Arms -->
+    <rect x="485" y="430" width="60" height="10" fill="#0053a0"/>
+    <!-- Legs -->
+    <rect x="505" y="480" width="10" height="30" fill="#e4d3a8"/>
+    <rect x="515" y="480" width="10" height="30" fill="#e4d3a8"/>
+    <!-- Pressure washer -->
+    <rect x="460" y="440" width="40" height="20" fill="#333"/>
+    <rect x="440" y="445" width="20" height="10" fill="#333"/>
+    <rect x="525" y="445" width="50" height="5" fill="#333"/>
+  </g>
+  
+  <!-- Bushes and trees -->
+  <circle cx="150" cy="470" r="30" fill="#3e612f"/>
+  <circle cx="180" cy="460" r="35" fill="#3e612f"/>
+  <circle cx="210" cy="475" r="25" fill="#3e612f"/>
+  
+  <circle cx="950" cy="470" r="30" fill="#3e612f"/>
+  <circle cx="980" cy="460" r="35" fill="#3e612f"/>
+  <circle cx="1010" cy="475" r="25" fill="#3e612f"/>
+  
+  <!-- Tree -->
+  <rect x="1100" y="300" width="20" height="150" fill="#6c5648"/>
+  <circle cx="1110" cy="260" r="60" fill="#3e612f"/>
+</svg>

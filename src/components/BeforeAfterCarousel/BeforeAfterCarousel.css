@@ -1,0 +1,252 @@
+.before-after-carousel {
+  background-color: #5b89a6; /* Odyssey blue as background */
+  padding: 80px 0;
+  position: relative;
+  color: white;
+}
+
+/* Diagonal pattern background similar to process section */
+.before-after-carousel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.08) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.08) 50%, rgba(0, 0, 0, 0.08) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.carousel-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.carousel-slider-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carousel-title {
+  color: white;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.carousel-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.carousel-separator .line {
+  height: 2px;
+  width: 60px;
+  background-color: white;
+  display: inline-block;
+}
+
+.carousel-separator .star {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 15px;
+}
+
+.before-after-carousel .slick-slider {
+  margin-bottom: 50px;
+}
+
+.before-after-carousel .slick-track {
+  display: flex !important;
+}
+
+.before-after-carousel .slick-slide {
+  height: inherit !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.before-after-carousel .slick-slide > div {
+  width: 100%;
+}
+
+.carousel-slide {
+  outline: none;
+  padding: 20px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-content {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slide-content:hover {
+  transform: translateY(-5px);
+}
+
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.before-after-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  display: block;
+}
+
+.slide-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.slide-description {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Custom arrow styling */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background-color: #5784a0; /* Exact color as requested */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-arrow:hover {
+  background-color: #4a7391; /* Slightly darker on hover */
+  transform: translateY(-50%) scale(1.1);
+}
+
+.custom-prev-arrow {
+  left: 20px;
+}
+
+.custom-next-arrow {
+  right: 20px;
+}
+
+/* Hide default slick arrows but keep the positioning */
+.slick-prev, 
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.slick-prev:before, 
+.slick-next:before {
+  content: '';
+}
+
+/* Customizing the slick carousel dots */
+.before-after-carousel .slick-dots li button:before {
+  color: white;
+  opacity: 0.5;
+  font-size: 12px;
+}
+
+.before-after-carousel .slick-dots li.slick-active button:before {
+  color: white;
+  opacity: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .before-after-carousel {
+    padding: 60px 0;
+  }
+  
+  .carousel-title {
+    font-size: 2.2rem;
+  }
+  
+  .slide-content {
+    padding: 20px;
+  }
+  
+  .slide-title {
+    font-size: 1.5rem;
+  }
+  
+  .slide-description {
+    font-size: 1.1rem;
+  }
+  
+  .custom-arrow {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .custom-prev-arrow {
+    left: 10px;
+  }
+  
+  .custom-next-arrow {
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-title {
+    font-size: 1.8rem;
+  }
+  
+  .carousel-separator .line {
+    width: 40px;
+  }
+  
+  .slide-title {
+    font-size: 1.3rem;
+  }
+  
+  .slide-description {
+    font-size: 1rem;
+  }
+}

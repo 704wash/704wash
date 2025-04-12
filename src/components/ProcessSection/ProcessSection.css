@@ -1,0 +1,157 @@
+.process-section {
+  background-color: #243b6b; /* Dark blue background like the service section */
+  padding: 80px 0;
+  position: relative;
+  color: white;
+}
+
+/* Diagonal pattern background */
+.process-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.08) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.08) 50%, rgba(0, 0, 0, 0.08) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.process-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.process-title {
+  color: white;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.process-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.process-separator .line {
+  height: 2px;
+  width: 60px;
+  background-color: #5b89a6; /* Odyssey blue */
+  display: inline-block;
+}
+
+.process-separator .star {
+  color: #5b89a6; /* Odyssey blue */
+  font-size: 1.5rem;
+  margin: 0 15px;
+}
+
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.process-step {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.process-step:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.step-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #5b89a6; /* Odyssey blue */
+}
+
+.step-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.process-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.process-button {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.quote-btn {
+  background-color: #5b89a6; /* Odyssey blue */
+  color: white;
+}
+
+.call-btn {
+  background-color: #5b89a6; /* Odyssey blue */
+  color: white;
+}
+
+.process-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .process-section {
+    padding: 60px 0;
+  }
+  
+  .process-title {
+    font-size: 2.2rem;
+  }
+  
+  .process-step {
+    padding: 20px;
+  }
+  
+  .step-title {
+    font-size: 1.4rem;
+  }
+  
+  .step-text {
+    font-size: 1rem;
+  }
+  
+  .process-buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .process-title {
+    font-size: 1.8rem;
+  }
+  
+  .process-separator .line {
+    width: 40px;
+  }
+}

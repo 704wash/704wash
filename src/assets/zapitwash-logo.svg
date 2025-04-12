@@ -1,0 +1,12 @@
+<svg width="200" height="80" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .logo-text { font-family: Arial, sans-serif; font-weight: bold; }
+    .main-text { fill: #2e4f87; }
+    .tagline { fill: #92c83e; font-size: 14px; }
+  </style>
+  <g>
+    <path d="M40,30 C40,20 45,15 55,15 L60,15 L60,65 L40,65 Z" fill="#2e4f87"/>
+    <text x="70" y="45" class="logo-text main-text" font-size="28">ZAPITWASH</text>
+    <text x="70" y="65" class="logo-text tagline">CLEAN &amp; PROTECT</text>
+  </g>
+</svg>

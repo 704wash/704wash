@@ -1,0 +1,324 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 20px; /* Restored original padding */
+  text-align: center;
+}
+
+.header-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Centered logo styling */
+.centered-logo {
+  position: absolute;
+  top: 20px; /* Restored original position */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30; /* Higher than nav to appear on top */
+}
+
+.logo-circle {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #5b89a6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.nav-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Main navigation styling */
+.main-nav {
+  background-color: #333333;
+  padding: 0;
+  position: relative;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+  height: 57px;
+  border-radius: 30px;
+  width: 90%;
+  max-width: 1200px;
+  z-index: 5;
+  margin: 0 auto;
+  margin-top: 20px; /* Restored original margin */
+  display: inline-block;
+}
+
+.nav-container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+}
+
+/* Navigation menu styling with split menus */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  height: 100%;
+  flex: 1; /* Make both menus take equal space */
+}
+
+.left-menu {
+  justify-content: space-around; /* Better spacing distribution */
+  padding-right: 40px; /* More space between menu and logo */
+}
+
+.right-menu {
+  justify-content: space-around; /* Better spacing distribution */
+  padding-left: 40px; /* More space between menu and logo */
+}
+
+/* Logo space in the middle */
+.logo-space {
+  width: 180px; /* Width for logo space in nav */
+  height: 57px;
+  flex: 0 0 auto; /* Don't allow this to flex */
+}
+
+.nav-item {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: 57px;
+}
+
+.home-item {
+  margin-left: 20px;
+}
+
+.contact-nav {
+  margin-right: 20px;
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 12px; /* Consistent padding */
+  display: flex;
+  align-items: center;
+  height: 100%;
+  white-space: nowrap;
+}
+
+.nav-item a:hover {
+  background-color: rgba(91, 137, 166, 0.5);
+  color: #9dca38;
+}
+
+.star-separator {
+  color: white;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  height: 57px;
+  opacity: 0.7; /* Slightly dim the separators */
+}
+
+.dropdown a {
+  position: relative;
+}
+
+.dropdown a:after {
+  content: ""; /* Removed the dropdown arrow */
+  margin-left: 0;
+}
+
+/* Mobile header styles - these will only apply to mobile view */
+.mobile-header {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #333333;
+  padding: 10px 15px;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1001;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.mobile-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-logo .logo-circle {
+  width: 50px;
+  height: 50px;
+  border-width: 2px;
+}
+
+.mobile-logo .nav-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.mobile-menu-toggle {
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* New dropdown icon style */
+.mobile-menu-toggle .menu-icon {
+  display: none; /* Hide the previous hamburger style */
+}
+
+.mobile-menu-toggle::before {
+  content: "☰"; /* Unicode hamburger icon */
+  color: white;
+  font-size: 24px;
+  transition: transform 0.3s;
+}
+
+.mobile-menu-toggle.active::before {
+  content: "×"; /* Unicode X icon */
+  font-size: 30px;
+}
+
+.mobile-menu-toggle:focus {
+  outline: none;
+}
+
+.mobile-menu-dropdown {
+  display: none;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: #333333;
+  z-index: 1000;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-dropdown.open {
+  max-height: 500px;
+}
+
+.mobile-nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-item a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mobile-nav-item a:hover {
+  background-color: rgba(91, 137, 166, 0.5);
+}
+
+.mobile-nav-item.contact-nav {
+  background-color: #4a9bd9; /* Brighter blue that complements the site's color scheme */
+}
+
+.mobile-nav-item.contact-nav a {
+  color: white;
+  font-weight: bold;
+}
+
+/* Media queries */
+@media (max-width: 992px) {
+  .nav-item a {
+    padding: 0 8px;
+    font-size: 13px;
+  }
+  
+  .logo-space {
+    width: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+
+  /* Hide desktop header elements */
+  .centered-logo,
+  .main-nav {
+    display: none;
+  }
+  
+  /* Show mobile header elements */
+  .mobile-header {
+    display: flex;
+  }
+  
+  .mobile-menu-dropdown {
+    display: block;
+  }
+  
+  .header {
+    padding-top: 0;
+    background-color: transparent;
+    position: relative;
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-item {
+    margin: 3px;
+  }
+  
+  .nav-item a {
+    padding: 0 10px;
+    font-size: 11px;
+  }
+}
